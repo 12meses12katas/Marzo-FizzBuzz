@@ -31,12 +31,16 @@ class FizzBuzzTest extends GroovyTestCase {
         assert "Buzz" == fizzBuzz.answer(5)
     }
     
+    void testSix() {
+        assert "Fizz" == fizzBuzz.answer(6)
+    }
+    
 }
 
 class FizzBuzz {
 
     String answer(int number) {
-        if (number == 3)
+        if (number % 3 == 0)
             "Fizz"
         else if (number == 5)
             "Buzz"
