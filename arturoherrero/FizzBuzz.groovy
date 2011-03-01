@@ -28,10 +28,8 @@ class FizzBuzzTest extends GroovyTestCase {
 class FizzBuzz {
 
     String answer(int number) {
-        if (number == 1)
-            "1"
-        else if (number == 2)
-            "2"
+        if (number != 3)
+            number.toString()
         else
             "Fizz"
     }
