@@ -48,12 +48,20 @@ class FizzBuzzTest extends GroovyTestCase {
 class FizzBuzz {
 
     String answer(int number) {
-        if (number % 3 == 0)
+        if (divisibleByThree(number))
             "Fizz"
-        else if (number % 5 == 0)
+        else if (divisibleByFive(number))
             "Buzz"
         else
             number.toString()
+    }
+    
+    private divisibleByThree(int number) {
+        number % 3 == 0
+    }
+    
+    private divisibleByFive(int number) {
+        number % 5 == 0
     }
     
 }
