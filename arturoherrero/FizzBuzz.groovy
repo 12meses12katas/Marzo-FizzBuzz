@@ -23,15 +23,25 @@ class FizzBuzzTest extends GroovyTestCase {
         assert "Fizz" == fizzBuzz.answer(3)
     }
     
+    void testFour() {
+        assert "4" == fizzBuzz.answer(4)
+    }
+    
+    void testFive() {
+        assert "Buzz" == fizzBuzz.answer(5)
+    }
+    
 }
 
 class FizzBuzz {
 
     String answer(int number) {
-        if (number != 3)
-            number.toString()
-        else
+        if (number == 3)
             "Fizz"
+        else if (number == 5)
+            "Buzz"
+        else
+            number.toString()
     }
     
 }
