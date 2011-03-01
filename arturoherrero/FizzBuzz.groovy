@@ -43,12 +43,18 @@ class FizzBuzzTest extends GroovyTestCase {
         assert "Buzz" == fizzBuzz.answer(10)
     }
     
+    void testFifteen() {
+        assert "FizzBuzz" == fizzBuzz.answer(15)
+    }
+    
 }
 
 class FizzBuzz {
 
     String answer(int number) {
-        if (divisibleByThree(number))
+        if (divisibleByThree(number) && divisibleByFive(number))
+            "FizzBuzz"
+        else if (divisibleByThree(number))
             "Fizz"
         else if (divisibleByFive(number))
             "Buzz"
