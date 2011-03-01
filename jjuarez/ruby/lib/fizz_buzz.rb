@@ -5,8 +5,9 @@ class Fixnum
   
   def to_fizzbuzz
     
-    str = "#{FIZZ if self % 3 == 0}#{BUZZ if self % 5 == 0}"
-
-    str.empty? ? "#{self}" : str
+    str_value = self.to_s
+    str       = "#{FIZZ if( self % 3 == 0 || str_value.include?( '3' ) )}#{BUZZ if( self % 5 == 0 || str_value.include?( '5' ) )}"
+   
+    str.empty? ? str_value : str
   end
 end
