@@ -6,6 +6,15 @@ public class FizzBuzzCounter {
 	public FizzBuzzCounter(){
 	}
 	
+	public boolean isFizz(int i){
+		if ((i%3==0) || (String.valueOf(i).indexOf('3')!=-1)) return true;
+		return false;
+	}
+	public boolean isBuzz(int i){
+		if ((i%5==0) || (String.valueOf(i).indexOf('5')!=-1)) return true;
+		return false;
+	}
+	
 	public String tick() {
 		String ret = null;
 		counter++;
