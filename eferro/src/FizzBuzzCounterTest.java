@@ -51,7 +51,7 @@ public class FizzBuzzCounterTest {
 	}
 	
 	@Test
-	public void testCountUpTo100() {
+	public void testGeneric() {
 		assertEquals("1", counter.tick());
 		assertEquals("2", counter.tick());
 		assertEquals("Fizz", counter.tick());
@@ -74,4 +74,31 @@ public class FizzBuzzCounterTest {
 		assertEquals("Buzz", counter.tick());
 		
 	}
+	
+	@Test
+	public void testIsFizz() {
+		assertTrue(counter.isFizz(3));
+		assertTrue(counter.isFizz(9));	
+		assertTrue(counter.isFizz(13));
+		assertTrue(counter.isFizz(34));
+		assertTrue(counter.isFizz(93));
+		
+		assertFalse(counter.isFizz(4));
+		assertFalse(counter.isFizz(5));	
+		assertFalse(counter.isFizz(1));		
+	}
+	
+	@Test
+	public void testIsBuzz(){
+		assertTrue(counter.isBuzz(5));
+		assertTrue(counter.isBuzz(15));	
+		assertTrue(counter.isBuzz(152));
+		assertTrue(counter.isBuzz(100));
+		assertTrue(counter.isBuzz(51));
+		
+		assertFalse(counter.isBuzz(4));
+		assertFalse(counter.isBuzz(99));	
+		assertFalse(counter.isBuzz(1));
+	}	
+	
 }
