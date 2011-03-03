@@ -17,17 +17,29 @@ class FizzBuzzMonkeyPatchTest extends GroovyTestCase {
         Number.metaClass.divisibleByFive = { ->
             delegate % 5 == 0
         }
+        
+        Number.metaClass.containsThree = { ->
+            delegate.toString().contains("3")
+        }
+        
+        Number.metaClass.containsFive = { ->
+            delegate.toString().contains("5")
+        }
 
         Number.metaClass.fizzBuzz = { ->
-            if (delegate.divisibleByThree() && delegate.divisibleByFive())
-                "FizzBuzz"
-            else if (delegate.divisibleByThree())
-                "Fizz"
-            else if (delegate.divisibleByFive())
-                "Buzz"
-            else
-                delegate.toString()
-        }        
+            def answer = ""
+        
+            if (delegate.divisibleByThree() || delegate.containsThree())
+                answer += "Fizz"
+                
+            if (delegate.divisibleByFive() || delegate.containsFive())
+                answer += "Buzz"
+                
+            if (answer.empty)
+                answer = delegate.toString()
+            
+            return answer
+        }
     }
 
     void testOne() {
@@ -64,6 +76,14 @@ class FizzBuzzMonkeyPatchTest extends GroovyTestCase {
     
     void testFifteen() {
         assert "FizzBuzz" == 15.fizzBuzz()
+    }
+    
+    void testContainsThree() {
+        assert "Fizz" == 13.fizzBuzz()
+    }
+    
+    void testContainsFive() {
+        assert "Buzz" == 52.fizzBuzz()
     }
     
 }
