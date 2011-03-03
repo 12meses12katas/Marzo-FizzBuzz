@@ -62,10 +62,10 @@ class FizzBuzz {
     String answer(int number) {
         def answer = ""
         
-        if (divisibleByThree(number) || number.toString().contains("3"))
+        if (divisibleByThree(number) || containsThree(number))
             answer += "Fizz"
             
-        if (divisibleByFive(number) || number.toString().contains("5"))
+        if (divisibleByFive(number) || containsFive(number))
             answer += "Buzz"
             
         if (answer.empty)
@@ -80,6 +80,14 @@ class FizzBuzz {
     
     private divisibleByFive(int number) {
         number % 5 == 0
+    }
+    
+    private containsThree(int number) {
+        number.toString().contains("3")
+    }
+    
+    private containsFive(int number) {
+        number.toString().contains("5")
     }
     
 }
