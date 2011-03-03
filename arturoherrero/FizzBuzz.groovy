@@ -48,7 +48,11 @@ class FizzBuzzTest extends GroovyTestCase {
     }
     
     void testContainsThree() {
-        //assert "Fizz" == fizzBuzz.answer(13)
+        assert "Fizz" == fizzBuzz.answer(13)
+    }
+    
+    void testContainsFive() {
+        assert "Buzz" == fizzBuzz.answer(52)
     }
     
 }
@@ -58,20 +62,16 @@ class FizzBuzz {
     String answer(int number) {
         def answer = ""
         
-        if (divisibleByThree(number))
+        if (divisibleByThree(number) || number.toString().contains("3"))
             answer += "Fizz"
             
-        if (divisibleByFive(number))
+        if (divisibleByFive(number) || number.toString().contains("5"))
             answer += "Buzz"
             
         if (answer.empty)
             answer = number.toString()
         
         return answer
-    }
-    
-    private isDivisible(int number) {
-    
     }
     
     private divisibleByThree(int number) {
