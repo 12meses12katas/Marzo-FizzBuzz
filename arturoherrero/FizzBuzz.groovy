@@ -62,10 +62,10 @@ class FizzBuzz {
     String answer(int number) {
         def answer = ""
         
-        if (divisibleByThree(number) || containsThree(number))
+        if (divisibleBy(number:number, divisor:3) || contains(number:number, digit:3))
             answer += "Fizz"
             
-        if (divisibleByFive(number) || containsFive(number))
+        if (divisibleBy(number:number, divisor:5) || contains(number:number, digit:5))
             answer += "Buzz"
             
         if (answer.empty)
@@ -74,20 +74,12 @@ class FizzBuzz {
         return answer
     }
     
-    private divisibleByThree(int number) {
-        number % 3 == 0
+    def divisibleBy(map) {
+        map.number % map.divisor == 0
     }
     
-    private divisibleByFive(int number) {
-        number % 5 == 0
-    }
-    
-    private containsThree(int number) {
-        number.toString().contains("3")
-    }
-    
-    private containsFive(int number) {
-        number.toString().contains("5")
+    def contains(map) {
+        map.number.toString().contains(map.digit.toString())
     }
     
 }

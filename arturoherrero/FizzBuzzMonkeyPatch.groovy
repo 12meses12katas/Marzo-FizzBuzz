@@ -9,36 +9,28 @@ import groovy.util.GroovyTestCase
 
 class FizzBuzzMonkeyPatchTest extends GroovyTestCase {
 
-    static {    
-        Number.metaClass.divisibleByThree = { ->
-            delegate % 3 == 0
-        }
-
-        Number.metaClass.divisibleByFive = { ->
-            delegate % 5 == 0
-        }
-        
-        Number.metaClass.containsThree = { ->
-            delegate.toString().contains("3")
-        }
-        
-        Number.metaClass.containsFive = { ->
-            delegate.toString().contains("5")
-        }
-
+    static {
         Number.metaClass.fizzBuzz = { ->
             def answer = ""
         
-            if (delegate.divisibleByThree() || delegate.containsThree())
+            if (delegate.isDivisibleBy(3) || delegate.contains(3))
                 answer += "Fizz"
                 
-            if (delegate.divisibleByFive() || delegate.containsFive())
+            if (delegate.isDivisibleBy(5) || delegate.contains(5))
                 answer += "Buzz"
                 
             if (answer.empty)
                 answer = delegate.toString()
             
             return answer
+        }
+        
+        Number.metaClass.isDivisibleBy = { divisor ->
+            delegate % divisor == 0
+        }
+        
+        Number.metaClass.contains = { digit ->
+            delegate.toString().contains(digit.toString())
         }
     }
 
