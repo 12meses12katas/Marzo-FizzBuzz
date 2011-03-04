@@ -53,7 +53,7 @@ class FizzBuzzTest extends PHPUnit_Framework_TestCase {
 
         $fb = new FizzBuzz();
 
-        $this->assertEquals($fb->write($actual), $expected);
+        $this->assertEquals($fb->writeRecursive($actual), $expected);
     }
 
 }
