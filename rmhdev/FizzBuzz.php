@@ -26,8 +26,8 @@ class FizzBuzz {
      * @param int $number
      * @return string
      */
-    function write($number)
-    {
+    function write($number) {
+        
         $result = array();
         for ($i=1; $i<= $number; $i++){
             $result[] = $this->getCodeForNumber($i);
@@ -58,6 +58,7 @@ class FizzBuzz {
      * @return string
      */
     protected function getCodeForNumber($number){
+        
         if (($number % 15) == 0){
             return self::FIZZBUZZ;
         }
