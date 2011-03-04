@@ -2,7 +2,12 @@
 # by J.A. Nache <nache.nache@gmail.com>
 
 for i in range(1,101):
-	if (i%3 == 0 or i%5 == 0) and (i%3 != i%5):
-		print "Fizz" if i%3 == 0 else "Buzz"
+	fizz = True if (i%3 == 0) or (str(i).count("3") > 0) else False
+	buzz = True if (i%5 == 0) or (str(i).count("5") > 0) else False
+	if fizz & buzz:
+		print "FizzBuzz?"
+	elif fizz | buzz:
+		print "Fizz" if i%3 == 0  else "Buzz"
 	else:
-		print "FizzBuzz?" if i%3 == 0 and i%5 == 0 else i
+		print i
+		
