@@ -7,7 +7,7 @@ for i in range(1,101):
 	if fizz & buzz:
 		print "FizzBuzz?"
 	elif fizz | buzz:
-		print "Fizz" if i%3 == 0  else "Buzz"
+		print "Fizz" if fizz  else "Buzz" #corregido, gracias a GermanDZ :)
 	else:
 		print i
 		
