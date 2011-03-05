@@ -1,10 +1,9 @@
 $:.unshift( File.join( File.dirname( __FILE__ ), 'lib' ) )
 
-
+desc "Test this stuff..."
 task :test do 
   require 'rake/runtest'
-
-  Rake.run_tests 'test/unit/tc_*.rb'
+  Rake.run_tests 'test/test_*.rb'
 end
 
 
