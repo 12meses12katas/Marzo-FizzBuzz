@@ -2,19 +2,19 @@ class Number {
 
 	Integer number;
 	
-	public String toString() {
+	String toString() {
 		return number.toString()
 	}
 	
-	public Number(Integer number) {
+	Number(Integer number) {
 		this.number = number
 	}
 	
-	public boolean divisibleBy(Integer aNumber) {
+	boolean divisibleBy(Integer aNumber) {
 		return number % aNumber == 0
 	}
 	
-	public boolean contains(Integer aNumber) {
+	boolean contains(Integer aNumber) {
 		return toString().indexOf(aNumber.toString()) != -1
 	}
 }
