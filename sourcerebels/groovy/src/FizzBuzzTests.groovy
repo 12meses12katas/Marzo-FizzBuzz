@@ -29,8 +29,8 @@ class FizzBuzzTests extends GroovyTestCase {
 	
 	void testContainsThreeOrFive() {
 
-		assertEquals 'Fizz', game.fizzBuzz(13)
-		assertEquals 'Buzz', game.fizzBuzz(25)
+		assertEquals 'Fizz',     game.fizzBuzz(13)
+		assertEquals 'Buzz',     game.fizzBuzz(25)
 		assertEquals 'FizzBuzz', game.fizzBuzz(35)
 		assertEquals 'FizzBuzz', game.fizzBuzz(51)
 	}
