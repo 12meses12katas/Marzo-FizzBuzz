@@ -69,6 +69,11 @@ class FizzBuzzTest {
     }
     
     @Test
+    public void test13(){
+        assertEquals("Fizz", app.compute(13))
+    }
+    
+    @Test
     public void test15(){
         assertEquals("FizzBuzz", app.compute(15))
     }
