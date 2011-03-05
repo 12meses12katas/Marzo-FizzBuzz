@@ -1,5 +1,5 @@
 class Number {
-	
+
 	Integer number;
 	
 	public String toString() {
@@ -8,14 +8,6 @@ class Number {
 	
 	public Number(Integer number) {
 		this.number = number
-	}
-	
-	public boolean isDivisibleByFive() {
-		return divisibleBy(5)
-	}
-	
-	public boolean isDivisibleByThree() {
-		return divisibleBy(3)
 	}
 	
 	public boolean divisibleBy(Integer aNumber) {
@@ -29,24 +21,47 @@ class Number {
 
 class FizzBuzz {
 
-	private static Integer THREE = 3
-	private static Integer FIVE = 5
 	private static String  FIZZ  = 'Fizz'
 	private static String  BUZZ  = 'Buzz'
+	private static Integer THREE = 3
+	private static Integer FIVE = 5
 
+	private theNumber
+
+	private boolean sayFizz() {
+
+		if (theNumber.divisibleBy(THREE) || theNumber.contains(THREE)) {
+			return true
+		}
+		return false
+	}
+
+	private boolean sayBuzz() {
+
+		if (theNumber.divisibleBy(FIVE) || theNumber.contains(FIVE)) {
+			return true
+		}
+		return false
+	}
+	
+	private boolean sayFizzBuzz() {
+		
+		if (sayFizz() && sayBuzz()) {
+			return true
+		}
+		return false
+	}
+	
 	String fizzBuzz(Integer number) {
 
-		Number n = new Number(number)		
-		if (n.contains(3) && n.contains(5)) {
+		theNumber = new Number(number)
+		if (sayFizzBuzz()) {
 			return FIZZ + BUZZ
-		}
-		if (n.divisibleBy(THREE) && n.divisibleBy(FIVE)) {
-			return FIZZ + BUZZ
-		}
-		if (n.divisibleBy(THREE)) {
+		}		
+		if (sayFizz()) {
 			return FIZZ
 		}
-		if (n.divisibleBy(FIVE)) {
+		if (sayBuzz()) {
 			return BUZZ
 		}
 		return number.toString()
