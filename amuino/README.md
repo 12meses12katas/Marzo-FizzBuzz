@@ -25,8 +25,8 @@ O usar prueba y error a partir de los tests que existen (bajo la carpeta `spec`)
 
 ¿No usas ruby?
 --------------
-Si estás en unix o linux, instálalo con (rvm)[http://rvm.beginrescueend.com/].
-Para windows, dicen que (RubyInstaller)[http://rubyinstaller.org/] funciona bien. 
+Si estás en unix o linux, instálalo con [rvm](http://rvm.beginrescueend.com/).
+Para windows, dicen que [RubyInstaller](http://rubyinstaller.org/) funciona bien. 
 
 Después, instala rspec con `gem install rspec`
 
