@@ -27,6 +27,9 @@ class Fixnum
 
 end
 
+# http://mlomnicki.com/ruby/tricks-and-quirks/2011/02/10/ruby-tricks2.html
+# https://gist.github.com/823701
+
 class Object
   def switch( hash )
     hash.each do |method, proc|
