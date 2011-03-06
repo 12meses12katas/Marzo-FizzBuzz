@@ -11,12 +11,8 @@ class FizzBuzz
   public
   def say (number)
     result = ""
-    if is_fizz? number
-      result << "Fizz"
-    end
-    if is_buzz? number
-      result << "Buzz"
-    end
+    result << "Fizz" if is_fizz? number
+    result << "Buzz" if is_buzz? number
     result = number.to_s if result.empty?
     result
   end
