@@ -20,7 +20,7 @@ Ahora cada vez que guardes un fichero los tests se ejecutarán de nuevo y tendr�
 
 ¿No usas rspec?
 ---------------
-Te tocará leer un poco: http://relishapp.com/rspec
+Te tocará leer un poco [la documentación de rspec](http://relishapp.com/rspec)
 O usar prueba y error a partir de los tests que existen (bajo la carpeta `spec`)
 
 ¿No usas ruby?
