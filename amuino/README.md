@@ -1,5 +1,6 @@
 FizBuzz
 =======
+De momento, sólo está implementado el primer paso (múltiplos de 3 y 5).
 
 * ruby 1.9.2
 * rspec 2.5.1
@@ -7,8 +8,10 @@ FizBuzz
 
 Revisa la kata ([#katabreakers](http://blog.abelmuino.com/2011/01/katabreakers-peer-review-de-12meses12katas.html))
 ------------------------------
+Ejecuta los tests con `autotest` o con `rspec -I lib spec/*`
+
 Usa los comentarios de github, los tickets o twitter (@amuino) para
-transmitirme tu feeback.
+transmitirme tu feeback, nuevos casos de prueba...
 
 ¿No usas autotest?
 ------------------
