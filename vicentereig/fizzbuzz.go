@@ -1,19 +1,19 @@
 package gobuzz
 
-import (
-  "fmt"
-)
-
-func FizzBuzz() {
+func FizzBuzz() [100]string {
+  var numbers [100]string
+  var fizzOrBuzzOrFizzBuzzOrNumber string
   for i:=1; i<101; i++ {
     if i % 5 == 0 && i % 3 == 0 {
-      fmt.Printf("FizzBuzz!\n")
+      fizzOrBuzzOrFizzBuzzOrNumber = "FizzBuzz"
     } else if i % 3 == 0 {
-      fmt.Printf("Fizz!\n")
+      fizzOrBuzzOrFizzBuzzOrNumber = "Fizz"
     } else if i % 5 == 0 {
-      fmt.Printf("Buzz!\n")
+      fizzOrBuzzOrFizzBuzzOrNumber = "Buzz"
     } else {
-      fmt.Printf("%d!\n", i)
+      fizzOrBuzzOrFizzBuzzOrNumber = string(i)
     }
+    numbers[i-1] = fizzOrBuzzOrFizzBuzzOrNumber
   }
+  return numbers
 }
