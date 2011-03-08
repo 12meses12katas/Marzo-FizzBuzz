@@ -1,5 +1,7 @@
 package gobuzz
 
+import "strconv"
+
 func FizzBuzz() [100]string {
   var numbers [100]string
   var fizzOrBuzzOrFizzBuzzOrNumber string
@@ -11,7 +13,7 @@ func FizzBuzz() [100]string {
     } else if i % 5 == 0 {
       fizzOrBuzzOrFizzBuzzOrNumber = "Buzz"
     } else {
-      fizzOrBuzzOrFizzBuzzOrNumber = string(i)
+      fizzOrBuzzOrFizzBuzzOrNumber = "%d"%i
     }
     numbers[i-1] = fizzOrBuzzOrFizzBuzzOrNumber
   }
