@@ -2,10 +2,6 @@ require "rspec"
 
 class Integer
 
-  def to_fizzbuzz
-    to_fizzbuzz1
-  end
-
   def to_fizzbuzz1
     return "FizzBuzz" if fizzbuzz?
     return "Fizz" if fizz?
@@ -30,6 +26,8 @@ class Integer
     end
     self
   end
+
+  alias to_fizzbuzz to_fizzbuzz1
 
   def multiple_of?  n
     self % n == 0
