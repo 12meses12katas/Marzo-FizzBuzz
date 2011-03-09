@@ -1,10 +1,12 @@
 package gobuzz
 
-import "strconv"
+import (
+  "strconv"
+)
 
 func FizzBuzz() [100]string {
-  var numbers [100]string
-  var fizzOrBuzzOrFizzBuzzOrNumber string
+  numbers := [100]string{}
+  fizzOrBuzzOrFizzBuzzOrNumber := ""
   for i:=1; i<101; i++ {
     if i % 5 == 0 && i % 3 == 0 {
       fizzOrBuzzOrFizzBuzzOrNumber = "FizzBuzz"
@@ -13,7 +15,7 @@ func FizzBuzz() [100]string {
     } else if i % 5 == 0 {
       fizzOrBuzzOrFizzBuzzOrNumber = "Buzz"
     } else {
-      fizzOrBuzzOrFizzBuzzOrNumber = "%d"%i
+      fizzOrBuzzOrFizzBuzzOrNumber = strconv.Itob(i,10)
     }
     numbers[i-1] = fizzOrBuzzOrFizzBuzzOrNumber
   }
