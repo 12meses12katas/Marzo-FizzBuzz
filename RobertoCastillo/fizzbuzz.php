@@ -5,23 +5,53 @@
 // Usage:	Open Source / for free
 // Description: Este script muestra la primer parte de la Kata de Marzo FizzBuzz
 
-define("MAXIMO", 100);
-define("MINIMO", 1);
+class fizzbuzz{
+	
+const MAXIMO=100;
+const MINIMO=1;
+const FIZZ="Fizz <br>";
+const BUZZ="Buzz <br>";
+const FIZZBUZZ="FizzBuzz <br>";
+private $num=0;
+
+public function mostrar_fizzbuzz(){
+    
+	for ($this->num = self::MINIMO; $this->num <= self::MAXIMO; $this->num++) {
+	   
+    	if ($this->esFuzzBuzzy($this->num)){
+	        echo self::FIZZBUZZ;
+    	} else {
+        	if ($this->esFuzz($this->num)){
+            	echo self::FIZZ;
+	        } else {
+    	        if ($this->esBuzz($this->num)) {
+        	        echo self::BUZZ;
+            	} else {
+                	echo $this->num, "<br>";
+	            }
+    	    }
+	    }
+	}
+}
 
 
-for ($num = MINIMO; $num <= MAXIMO; $num++) {
-    if ($num % 3 == 0 && $num % 5 == 0) {
-        echo "FIZZBUZZ <br>";
-    } else {
-        if ($num % 3 == 0) {
-            echo "FIZZ <br>";
-        } else {
-            if ($num % 5 == 0) {
-                echo "BUZZ <br>";
-            } else {
-                echo $num, "<br>";
-            }
-        }
-    }
+private function esFuzz($num){
+	if($num % 3 == 0 || strchr($num, "3")){
+		return true;
+		}		
+	}
+	
+private function esBuzz($num){
+	if($num % 5 == 0 || strchr($num, "5")){
+		return true;
+		}	
+	}	
+	
+private function esFuzzBuzzy($num){
+	if(($num % 3 == 0 && $num % 5 == 0) || (strstr($num, "3") && strstr($num, "5")) || (strstr($num,"3") && ($num % 5 == 0)) || (strstr($num,"5") && ($num % 3 == 0))){
+		return true;
+		}	
+	}
+	
 }
 ?>
