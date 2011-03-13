@@ -5,8 +5,7 @@ class FizzBuzz():
     def execute(self):
         numbers = range(1,101)
         for index in range(len(numbers)):
-            if ((numbers[index] % 3 == 0) and 
-                (numbers[index] % 5 == 0)):
+            if (self.__hasOrIsMultipleOfBoth(numbers[index], 3, 5)):
                 numbers[index] = "FizzBuzz"
 
             elif (self.__hasOrIsMultipleOf(numbers[index], 3)):
@@ -20,6 +19,13 @@ class FizzBuzz():
     def __hasOrIsMultipleOf(self, number, divisor):
         if ((number % divisor == 0) or 
             (str(number).__contains__(str(divisor)))):
+                return True
+        else:
+            return False
+
+    def __hasOrIsMultipleOfBoth(self, number, div1, div2):
+        if (self.__hasOrIsMultipleOf(number, div1) and
+            self.__hasOrIsMultipleOf(number, div2)):
                 return True
         else:
             return False
