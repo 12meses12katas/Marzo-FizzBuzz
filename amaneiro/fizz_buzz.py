@@ -5,10 +5,14 @@ class FizzBuzz():
     def execute(self):
         numbers = range(1,101)
         for index in range(len(numbers)):
-            if (numbers[index] % 3 == 0):
+            if ((numbers[index] % 3 == 0) and 
+                (numbers[index] % 5 == 0)):
+                    numbers[index] = "FizzBuzz"
+
+            elif (numbers[index] % 3 == 0):
                 numbers[index] = "Fizz"
 
-            if (numbers[index] != "Fizz" and numbers[index] % 5 == 0):
+            elif (numbers[index] % 5 == 0):
                 numbers[index] = "Buzz"
 
         return numbers
