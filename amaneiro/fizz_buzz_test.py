@@ -17,5 +17,11 @@ class FizzBuzzTestCase(unittest.TestCase):
         self.assertEqual('Fizz', numbers[29])
         self.assertEqual('Fizz', numbers[98])
 
+    def testRaisesBuzzWhenNumberIsMultipleOf5(self):
+        numbers = self.fb.execute()
+        self.assertEqual('Buzz', numbers[4])
+        self.assertEqual('Buzz', numbers[49])
+        self.assertEqual('Buzz', numbers[94])
+
 if __name__ == '__main__':
     unittest.main()
