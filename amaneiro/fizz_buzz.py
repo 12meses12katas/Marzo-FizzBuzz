@@ -9,10 +9,17 @@ class FizzBuzz():
                 (numbers[index] % 5 == 0)):
                     numbers[index] = "FizzBuzz"
 
-            elif (numbers[index] % 3 == 0):
+            elif (self.__hasOrIsMultipleOf3(numbers[index])):
                 numbers[index] = "Fizz"
 
             elif (numbers[index] % 5 == 0):
                 numbers[index] = "Buzz"
 
         return numbers
+
+    def __hasOrIsMultipleOf3(self, number):
+        if ((number % 3 == 0) or 
+            (str(number).__contains__('3'))):
+                return True
+        else:
+            return False
