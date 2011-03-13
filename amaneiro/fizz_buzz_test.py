@@ -25,5 +25,8 @@ class FizzBuzzTestCase(unittest.TestCase):
         self.assertEqual('FizzBuzz', self.numbers[14])
         self.assertEqual('FizzBuzz', self.numbers[29])
 
+    def testRaisesFizzIsNumberContains3(self):
+        self.assertEqual('Fizz', self.numbers[31])
+
 if __name__ == '__main__':
     unittest.main()
