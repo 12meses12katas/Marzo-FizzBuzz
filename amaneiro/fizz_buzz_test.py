@@ -14,6 +14,8 @@ class FizzBuzzTestCase(unittest.TestCase):
     def testRaisesFizzWhenNumberIsMultipleOf3(self):
         numbers = self.fb.execute()
         self.assertEqual('Fizz', numbers[2])
+        self.assertEqual('Fizz', numbers[29])
+        self.assertEqual('Fizz', numbers[98])
 
 if __name__ == '__main__':
     unittest.main()
