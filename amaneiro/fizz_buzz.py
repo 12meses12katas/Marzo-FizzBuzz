@@ -3,4 +3,6 @@
 class FizzBuzz():
 
     def execute(self):
-        return range(1,101)
+        numbers = range(1,101)
+        numbers[2] = "Fizz"
+        return numbers
