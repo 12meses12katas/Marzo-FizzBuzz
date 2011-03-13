@@ -4,5 +4,7 @@ class FizzBuzz():
 
     def execute(self):
         numbers = range(1,101)
-        numbers[2] = "Fizz"
+        for index in range(len(numbers)):
+            if (numbers[index] % 3 == 0):
+                numbers[index] = "Fizz"
         return numbers
