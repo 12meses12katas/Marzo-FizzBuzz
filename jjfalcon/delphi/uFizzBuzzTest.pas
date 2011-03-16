@@ -8,81 +8,79 @@ Uses
 
 type
 
-  Test_FizzBuzz = class(TGUITestCase)
+  FizzBuzz_Spec = class(TGUITestCase)
+  private
+    procedure CheckFizz(n: integer; val: string); overload;
+    procedure CheckFizz(msg: string; n: integer; val: string); overload;
   published
-    procedure fb_1_is_1;
-    procedure fb_2_is_2;
-    procedure fb_3_is_Fizz;
-    procedure fb_4_is_4;
-    procedure fb_5_is_Buzz;
-    procedure fb_6_is_Fizz;
-    procedure fb_13_is_Fizz;
-    procedure fb_15_is_Fizz;
-    procedure fb_53_is_FizzBuzz;
-    procedure fb_56_is_Buzz;
-    procedure fb_100_is_Buzz;
+    procedure WhenNumber_ThenNumber;
+    procedure WhenNumberIsMultipleOf3_ThenFizz;
+    procedure WhenNumberIsMultipleOf5_ThenBuzz;
+    procedure WhenNumberHas3_ThenFizz;
+    procedure WhenNumberHas5_ThenBuzz;
+    procedure WhenNumberIsFizzAndBuzz_ThenFizzBuzz;
   end;
 
 implementation
 
 uses
+  sysutils,
   uFizzBuzz;
 
-procedure Test_FizzBuzz.fb_1_is_1;
+procedure FizzBuzz_Spec.CheckFizz(n: integer; val: string);
 begin
-  CheckEquals('1', FizzBuzz(1));
+  CheckEquals(val, FizzBuzz(n), 'Fizz('+IntToStr(n)+')');
 end;
 
-procedure Test_FizzBuzz.fb_2_is_2;
+procedure FizzBuzz_Spec.CheckFizz(msg: string; n: integer; val: string);
 begin
-  CheckEquals('2', FizzBuzz(2));
+  CheckEquals(val, FizzBuzz(n), Msg + ' Fizz('+IntToStr(n)+')');
 end;
 
-procedure Test_FizzBuzz.fb_3_is_Fizz;
+procedure FizzBuzz_Spec.WhenNumber_ThenNumber;
 begin
-  CheckEquals('Fizz', FizzBuzz(3));
+  CheckFizz('it will say the given number', 1, '1');
+  CheckFizz(2, '2');
+  CheckFizz(4, '4');
 end;
 
-procedure Test_FizzBuzz.fb_4_is_4;
+procedure FizzBuzz_Spec.WhenNumberIsMultipleOf3_ThenFizz;
+var
+  msg: string;
 begin
-  CheckEquals('4', FizzBuzz(4));
+  msg := 'it will say Fizz when the number is multiple of 3';
+  CheckFizz(msg, 3, 'Fizz');
+  CheckFizz(6, 'Fizz');
+  CheckFizz(9, 'Fizz');
 end;
 
-procedure Test_FizzBuzz.fb_5_is_Buzz;
+procedure FizzBuzz_Spec.WhenNumberIsMultipleOf5_ThenBuzz;
 begin
-  CheckEquals('Buzz', FizzBuzz(5));
+  CheckFizz( 5, 'Buzz');
+  CheckFizz(10, 'Buzz');
+  CheckFizz(20, 'Buzz');
 end;
 
-procedure Test_FizzBuzz.fb_6_is_Fizz;
+procedure FizzBuzz_Spec.WhenNumberHas3_ThenFizz;
 begin
-  CheckEquals('Fizz', FizzBuzz(6));
+  CheckFizz(13, 'Fizz');
+  CheckFizz(23, 'Fizz');
+  CheckFizz(31, 'Fizz');
 end;
 
-procedure Test_FizzBuzz.fb_13_is_Fizz;
+procedure FizzBuzz_Spec.WhenNumberHas5_ThenBuzz;
 begin
-  CheckEquals('Fizz', FizzBuzz(13));
+  CheckFizz(56, 'Buzz');
 end;
 
-procedure Test_FizzBuzz.fb_15_is_Fizz;
+procedure FizzBuzz_Spec.WhenNumberIsFizzAndBuzz_ThenFizzBuzz;
 begin
-  CheckEquals('FizzBuzz', FizzBuzz(15));
-end;
-
-procedure Test_FizzBuzz.fb_53_is_FizzBuzz;
-begin
-  CheckEquals('FizzBuzz', FizzBuzz(53));
-end;
-
-procedure Test_FizzBuzz.fb_56_is_Buzz;
-begin
-  CheckEquals('Buzz', FizzBuzz(56));
-end;
-
-procedure Test_FizzBuzz.fb_100_is_Buzz;
-begin
-  CheckEquals('Buzz', FizzBuzz(100));
+  CheckFizz(15, 'FizzBuzz');
+  CheckFizz(30, 'FizzBuzz');
+  CheckFizz(45, 'FizzBuzz');
+  CheckFizz(53, 'FizzBuzz');
 end;
 
 initialization
-  TestFramework.RegisterTest('', Test_FizzBuzz.Suite);
+  TestFramework.RegisterTest('', FizzBuzz_Spec.Suite);
 end.
