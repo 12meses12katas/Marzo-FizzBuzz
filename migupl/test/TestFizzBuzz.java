@@ -1,4 +1,3 @@
-
 import static org.junit.Assert.*;
 
 import org.junit.After;
@@ -19,7 +18,9 @@ public class TestFizzBuzz {
 
 	@Test
 	public void testAnswerTo1Is1() {
-		assertTrue(fizzBuzz.getAnswerTo(1).equals("1"));
+		Integer uno = new Integer(1);
+		
+		assertTrue(fizzBuzz.getAnswerTo(uno).equals(uno.toString()));
 	}
 
 	@Test
@@ -44,7 +45,7 @@ public class TestFizzBuzz {
 
 	@Test
 	public void testAnswerEmptyStringToNull() {
-		assertEquals(fizzBuzz.getAnswerTo(null).length(),"".length());
+		assertEquals(fizzBuzz.getAnswerTo(null).length(),SpecialAnswer.INVALID_NUMBER_ANSWER.length());
 	}
 
 	@Test

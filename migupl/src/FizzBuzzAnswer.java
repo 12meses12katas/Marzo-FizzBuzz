@@ -1,29 +1,20 @@
-
 public class FizzBuzzAnswer implements SpecialAnswer {
 
 	@Override
 	public String getAnswerTo(Integer number) {
 		StringBuffer answer = new StringBuffer();
 		
-		try {
-			String texto = number.toString();
-			
-			for(FizzBuzzNumbers fizzBuzzCase : FizzBuzzNumbers.values()) {
-				if(0 == number % fizzBuzzCase.getNumber() ||
-						texto.contains(fizzBuzzCase.getNumber().toString())) {
-					answer.append(fizzBuzzCase.getAnswer());
-				}
-			}
-
-			if(0 == answer.length()) {
-				return number.toString();
-			}
-			
-		} catch (NullPointerException npe) {
-			return new String();
+		if(null == number) {
+			return INVALID_NUMBER_ANSWER;
 		}
 
-		return answer.toString();
+		for(FizzBuzzNumbers fizzBuzzCase : FizzBuzzNumbers.values()) {
+			if (fizzBuzzCase.isFizzBuzz(number)){
+				answer.append(fizzBuzzCase.getAnswer());
+			}
+		}
+
+		return (0 == answer.length()) ? number.toString() : answer.toString();
 	}
 
 }

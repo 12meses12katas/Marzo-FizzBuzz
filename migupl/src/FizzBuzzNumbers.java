@@ -17,4 +17,17 @@ public enum FizzBuzzNumbers {
 	public String getAnswer() {
 		return text;
 	}
+	
+	public Boolean isFizzBuzz(Integer number) {
+		String texto;
+		
+		try {
+			texto = number.toString();
+		} catch (NullPointerException npe) {
+			return Boolean.FALSE;
+		}
+		
+		return (0 == number % getNumber() ||
+				texto.contains(getNumber().toString()));
+	}
 }
