@@ -6,10 +6,13 @@ data FizzBuzz = ConsString String
               | ConsInt Int
               deriving (Show,Eq)
 
+divBy :: Int -> Int -> Bool
 divBy n x = mod n x==0
+
+include :: Int -> Int -> Bool
 include n x = n == x 
               || mod n 10 == x
-              || n > x && include (div n 10) x    
+              || n > x && include (div n 10) x
 
 divByOrInclude n x = or $ [divBy,include] <*> [n] <*> [x]
 
