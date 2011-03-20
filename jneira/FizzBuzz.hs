@@ -1,9 +1,17 @@
 module FizzBuzz where
 import Test.HUnit
-
+import Control.Applicative
+       
 data FizzBuzz = ConsString String 
               | ConsInt Int
               deriving (Show,Eq)
+
+divBy n x = mod n x==0
+include n x = n == x 
+              || mod n 10 == x
+              || n > x && include (div n 10) x    
+
+divByOrInclude n x = or $ [divBy,include] <*> [n] <*> [x]
 
 fizzbuzz :: [FizzBuzz]
 fizzbuzz= map pred [1..100]
@@ -12,11 +20,7 @@ fizzbuzz= map pred [1..100]
           | divByOrHas 3 = ConsString "fizz"
           | divByOrHas 5 = ConsString "buzz"
           | otherwise = ConsInt n                 
-            where divByOrHas d = 
-                    let (dec,unid)=(div n 10,mod n 10) in
-                    mod n d==0 ||
-                    unid == d || dec == d
-                    
+            where divByOrHas d = divByOrInclude n d                    
                     
 testTrivial = TestCase $ assertEqual
               "Debe devolver el numero"
@@ -43,7 +47,7 @@ testFizzBuzz = TestCase $ do
     "Debe devolver fizzbuzz si el numero es divisible por 5 y 3"
     (ConsString "fizzbuzz") (fizzbuzz !! 14)
   assertEqual
-    "o si tiene un 5 y un 3"
+    "o si tiene un 5 o un 3"
     (ConsString "fizzbuzz") (fizzbuzz !! 34)
            
 main= runTestTT $ TestList [testTrivial,testFizz,testBuzz,testFizzBuzz]
