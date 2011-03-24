@@ -2,17 +2,10 @@
 
 
 def contiene(numero, char):
-	if (str(numero).find(char)) != -1:
-		return True
-	else:
-		return False
+	return True if (str(numero).find(char)) != -1 else False
 
 def divisible(numero, div):
-	if (numero % div == 0):
-		return True
-	else:
-		return False
-
+	return True if (numero % div == 0) else False
 
 for i in range(1,101):
 	fizz = True if contiene(i, "3") or divisible(i, 3) else False
