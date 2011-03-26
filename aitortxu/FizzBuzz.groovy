@@ -4,21 +4,25 @@ class FizzBuzz extends GroovyTestCase{
 	
 	static main(args) {
 		def fizzBuzz = new FizzBuzz() 
-		(1..33).each{ number ->
+		(1..100).each{ number ->
 		println "Number " + number + ":" + fizzBuzz.say(number)
 		}
 	}
-	
-
 	String say(Integer number){
 		String response = ""
-		if (number%3 == 0){
+		if (isFizz(number)){
 			response = "Fizz"
 		}
-		if (number%5 == 0){
+		if (isBuzz(number)){
 			response += "Buzz"
 		}
 		return response?:number.toString()
+	}
+	boolean isBuzz(Integer number){
+		number%5 == 0
+	}
+	boolean isFizz(Integer number){
+		number%3 == 0
 	}
 	void testNormalNumbersAreNormal(){
 		assert say(1) == "1"
