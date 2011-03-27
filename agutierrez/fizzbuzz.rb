@@ -1,25 +1,26 @@
  class Fizzbuzz
+
    Delimiter = " "
+
+   def initialize(rule_set = 1)
+     @rule_set = rule_set
+   end
 
    def list(number)
 
      return nil if number == 0
      @kata = ""
-     1.upto(number) do |counter|
-       @kata += counter == 1 ? counter.to_s : Delimiter + eval_rules1(counter)
+     if @rule_set == 1
+       1.upto(number) do |counter|
+         @kata += counter == 1 ? counter.to_s : Delimiter + eval_rules1(counter)
+       end
+     else
+       1.upto(number) do |counter|
+         @kata += counter == 1 ? counter.to_s : Delimiter + eval_rules2(counter)
+       end
      end
      return @kata
    end # list
-
-   def list2(number)
-
-     return nil if number == 0
-     @kata = ""
-     1.upto(number) do |counter|
-       @kata += counter == 1 ? counter.to_s : Delimiter + eval_rules2(counter)
-     end
-     return @kata
-   end
 
    private
 

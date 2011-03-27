@@ -42,7 +42,7 @@ describe "testing counter" do
   describe "set of rules 1" do
 
     before(:each) do
-      @fb = Fizzbuzz.new
+      @fb = Fizzbuzz.new(1)
     end
 
     Data_kata.each do |testdata|
@@ -56,13 +56,13 @@ describe "testing counter" do
     describe "set of rules 2" do
 
     before(:each) do
-      @fb = Fizzbuzz.new
+      @fb = Fizzbuzz.new(2)
     end
 
     Data_kata2.each do |testdata|
 
       it testdata[0] do
-        @fb.list2(testdata[1]).should == testdata[2]
+        @fb.list(testdata[1]).should == testdata[2]
       end
     end # each
   end # set of rules 1
