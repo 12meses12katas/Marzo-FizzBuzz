@@ -1,7 +1,7 @@
 //KATA
-def fizz = { it%3 == 0 || Integer.toString(it).contains("3") ?"Fizz":"" }
+def fizz = { it%3 == 0 || it.toString().contains("3") ?"Fizz":"" }
 
-def buzz = { it%5 == 0 || Integer.toString(it).contains("5") ?"Buzz":"" }
+def buzz = { it%5 == 0 || it.toString().contains("5") ?"Buzz":"" }
 
 def sayFizzBuzz = {
     result = fizz(it) + buzz(it)
