@@ -7,13 +7,12 @@ class Fixnum
   
   def divisible_por_cinco?
     self % 5 == 0
-  end
-  
-  
+  end  
   
   public
   
   def fizzbuzz
+    return "FizzBuzz" if divisible_por_tres? and divisible_por_cinco?
     return "Fizz" if divisible_por_tres?
     return "Buzz" if divisible_por_cinco?
     self
