@@ -5,8 +5,20 @@ describe "Kata FizzBuzz" do
          n.fizzbuzz.should == "Fizz"
        end
     end
+    
+    it "Un numero es Fizz si contiene un 3" do
+      [33,123,322,53].each do |n|
+        n.fizzbuzz.should == "Fizz"
+      end
+    end
     it "Un numero es Buzz si es divisible entre 5" do
        [5,10,20,25].each do |n|
+         n.fizzbuzz.should == "Buzz"
+       end
+    end
+    
+    it "Un numero es Buzz si contiene un 5" do
+       [9550,125,5515].each do |n|
          n.fizzbuzz.should == "Buzz"
        end
     end
