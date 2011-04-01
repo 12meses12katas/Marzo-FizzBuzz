@@ -16,3 +16,16 @@ $ ./fizzbuzz.pl
 alternativamente con:
 
 $ perl fizzbuzz.pl
+
+Para ejecutar las pruebas.
+
+$ chmod +x fizzbuzz.t
+$ ./fizzbuzz.t
+
+alternativamente con:
+
+$ perl fizzbuzz.t
+
+para obtener resumen de pruebas:
+
+$ prove fizzbuzz.t
