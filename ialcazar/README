@@ -1,0 +1,4 @@
+He hecho las especificaciones de dos formas:
+- fizzbuzz_spec.rb: contiene una versión sencilla de especificaciones utilizando it. El problema es que si se produce algún error en alguno de los ejemplos de la especificación las salida por pantalla no es muy clara.
+
+- fizzbuzz2_spec.rb: Es otra solución utilizando contextos. Para cada escenario generamos un contexto. De esta forma la salida de rspec es mas clara. Si se produce algún error por la salida, tendrmeos mas claro el ejemplo que falla.
