@@ -1,0 +1,5 @@
+C:\Users\root\12Katas\Marzo-FizzBuzz\eltoby\FizzBuzz\FizzBuzz.Logic\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\root\12Katas\Marzo-FizzBuzz\eltoby\FizzBuzz\FizzBuzz.Logic\bin\Debug\FizzBuzz.Logic.dll
+C:\Users\root\12Katas\Marzo-FizzBuzz\eltoby\FizzBuzz\FizzBuzz.Logic\bin\Debug\FizzBuzz.Logic.pdb
+C:\Users\root\12Katas\Marzo-FizzBuzz\eltoby\FizzBuzz\FizzBuzz.Logic\obj\Debug\FizzBuzz.Logic.dll
+C:\Users\root\12Katas\Marzo-FizzBuzz\eltoby\FizzBuzz\FizzBuzz.Logic\obj\Debug\FizzBuzz.Logic.pdb
