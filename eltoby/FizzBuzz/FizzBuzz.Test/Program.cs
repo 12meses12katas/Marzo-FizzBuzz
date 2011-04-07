@@ -9,7 +9,7 @@ namespace FizzBuzz.Test
         static void Main(string[] args)
         {
             FizzBuzzResolver f = new FizzBuzzResolver();
-            for (int i = 0; i <= 100; i++)
+            for (int i = 1; i <= 100; i++)
                 Console.WriteLine(f.GetFizzBuzz(i));
 
             Console.WriteLine("Test Ended. Press Enter to continue...");
