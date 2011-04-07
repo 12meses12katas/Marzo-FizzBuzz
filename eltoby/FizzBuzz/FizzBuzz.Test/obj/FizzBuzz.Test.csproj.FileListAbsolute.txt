@@ -1,7 +1,0 @@
-C:\Users\root\12Katas\Marzo-FizzBuzz\eltoby\FizzBuzz\FizzBuzz.Test\obj\Debug\ResolveAssemblyReference.cache
-C:\Users\root\12Katas\Marzo-FizzBuzz\eltoby\FizzBuzz\FizzBuzz.Test\bin\Debug\FizzBuzz.Test.exe
-C:\Users\root\12Katas\Marzo-FizzBuzz\eltoby\FizzBuzz\FizzBuzz.Test\bin\Debug\FizzBuzz.Test.pdb
-C:\Users\root\12Katas\Marzo-FizzBuzz\eltoby\FizzBuzz\FizzBuzz.Test\bin\Debug\FizzBuzz.Logic.dll
-C:\Users\root\12Katas\Marzo-FizzBuzz\eltoby\FizzBuzz\FizzBuzz.Test\bin\Debug\FizzBuzz.Logic.pdb
-C:\Users\root\12Katas\Marzo-FizzBuzz\eltoby\FizzBuzz\FizzBuzz.Test\obj\Debug\FizzBuzz.Test.exe
-C:\Users\root\12Katas\Marzo-FizzBuzz\eltoby\FizzBuzz\FizzBuzz.Test\obj\Debug\FizzBuzz.Test.pdb
