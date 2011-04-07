@@ -53,6 +53,8 @@ for i in `seq 1 100`;do
        buzz=$?
     fi
 
+    echo -n "$i: "
+
 
     if [[ $fizz -eq 1 && $buzz -eq 1 ]]; then
        echo "FizzBuzz"
