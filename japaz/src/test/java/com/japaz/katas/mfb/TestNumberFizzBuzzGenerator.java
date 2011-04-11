@@ -11,9 +11,14 @@ public class TestNumberFizzBuzzGenerator {
 	@Before
 	public void setUp() {
 		numberGenerator = new NumberGenerator();
-		numberGenerator.addNumberPrinter(new FizzNumberPrinter());
+		numberGenerator.addNumberPrinter(new FizzNumberType());
 		numberGenerator.addNumberPrinter(new BuzzNumberPrinter());
-		numberGenerator.addNumberPrinter(new DefaultPrintNumber());
+		
+		OtherNumberType numberPrinter = new OtherNumberType();
+		numberPrinter.addNumberPrinter(new FizzNumberType());
+		numberPrinter.addNumberPrinter(new BuzzNumberPrinter());
+		
+		numberGenerator.addNumberPrinter(numberPrinter);
 	}
 	
 	@Test
@@ -37,6 +42,24 @@ public class TestNumberFizzBuzzGenerator {
 	@Test
 	public void testPrintFizzBuzzNumber() {
 		String number = numberGenerator.printNumber(15);
+		assertEquals("FizzBuzz", number);
+	}
+	
+	@Test
+	public void testPrintFizzNumberStage2() {
+		String number = numberGenerator.printNumber(37);
+		assertEquals("Fizz", number);
+	}
+	
+	@Test
+	public void testPrintBuzzNumberStage2() {
+		String number = numberGenerator.printNumber(52);
+		assertEquals("Buzz", number);
+	}
+
+	@Test
+	public void testPrintFizzBuzzNumberStage2() {
+		String number = numberGenerator.printNumber(351233);
 		assertEquals("FizzBuzz", number);
 	}
 	
