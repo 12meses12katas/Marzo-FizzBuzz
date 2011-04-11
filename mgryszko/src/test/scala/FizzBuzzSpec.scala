@@ -23,8 +23,21 @@ class FizzBuzzSpec extends SpecificationWithJUnit with DataTables {
         8 ! "8" |
         9 ! "Fizz" |
         10 ! "Buzz" |
+        13 ! "Fizz" |
         15 ! "FizzBuzz" |
         20 ! "Buzz" |
+        23 ! "Fizz" |
+        30 ! "FizzBuzz" |
+        31 ! "Fizz" |
+        35 ! "FizzBuzz" |
+        38 ! "Fizz" |
+        51 ! "FizzBuzz" |
+        52 ! "Buzz" |
+        53 ! "FizzBuzz" |
+        54 ! "FizzBuzz" |
+        55 ! "Buzz" |
+        57 ! "FizzBuzz" |
+        59 ! "Buzz" |
         98 ! "98" |
         99 ! "Fizz" |
         100 ! "Buzz" | { (n, response) => {
