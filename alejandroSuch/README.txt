@@ -1,3 +1,0 @@
-Kata FizzBuzz en Java, intentando usar el mínimo número de líneas de código posibles, aunque ya sé que le podría haber quitado un par más...
-
-Añadida también solución en Groovy, ejecutable desde el groovyConsole
