@@ -1,0 +1,31 @@
+Para ejecutar el programa
+
+$ awk -f fizzbuzz.awk
+
+Para una versión en línea de comandos en una línea, por ejemplo:
+
+$ for i in $(seq 1 1 100); do echo "$i"; done | awk '{x=0; if ($1%3 == 0 || $1 ~ 3 ){ printf "Fizz"; x=1; } if ($1%5 == 0 || $1 ~ 5){ printf "Buzz"; x=1; } if (x == 0) printf $1; print "";}'
+
+=======================
+
+Para el script de perl solo basta asignar permisos de ejecución.
+
+$ chmod +x fizzbuzz.pl
+$ ./fizzbuzz.pl
+
+alternativamente con:
+
+$ perl fizzbuzz.pl
+
+Para ejecutar las pruebas.
+
+$ chmod +x fizzbuzz.t
+$ ./fizzbuzz.t
+
+alternativamente con:
+
+$ perl fizzbuzz.t
+
+para obtener resumen de pruebas:
+
+$ prove fizzbuzz.t

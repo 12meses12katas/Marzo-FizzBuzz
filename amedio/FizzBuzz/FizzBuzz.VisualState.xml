@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<VisualState xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ShowCheckBoxes="false">
+  <TopNode>[0-1000]D:\repository\FizzBuzz-Marzo\amedio\FizzBuzz\FizzBuzz.nunit</TopNode>
+  <SelectedNode>[0-1000]D:\repository\FizzBuzz-Marzo\amedio\FizzBuzz\FizzBuzz.nunit</SelectedNode>
+  <ExcludeCategories>false</ExcludeCategories>
+  <Nodes>
+    <Node UniqueName="[0-1000]D:\repository\FizzBuzz-Marzo\amedio\FizzBuzz\FizzBuzz.nunit" Expanded="true" />
+    <Node UniqueName="[0-1003]D:\repository\FizzBuzz-Marzo\amedio\FizzBuzz\TestFizzBuzz\bin\Release\TestFizzBuzz.dll" Expanded="true" />
+    <Node UniqueName="[0-1004]TestFizzBuzz" Expanded="true" />
+    <Node UniqueName="[0-1001]TestFizzBuzz.UnitTest" Expanded="true" />
+  </Nodes>
+</VisualState>
