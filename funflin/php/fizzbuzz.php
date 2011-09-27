@@ -1,11 +1,25 @@
 <?php
-
-class fizzbuzz {
+/**
+ * Class for generate numbers and change some numbers to fizz, buzz or fizzbuzz
+ */
+class fizzbuzz
+{
 
     const FIZZ = 'Fizz';
     const BUZZ = 'Buzz';
+    const FIZZNUM = '3';
+    const BUZZNUM = '5';
     const SEPARADOR = ' ';
-    function getNumbers($count) {
+
+/**
+ * Generate secuence of numbers
+ * 
+ * @param int $count last number of secuence
+ * 
+ * @return string of numbers and predefined words
+ */
+    public function getNumbers($count)
+    {
         $salida = '';
         $i = 1;
         while ($i <= $count) {
@@ -16,7 +30,15 @@ class fizzbuzz {
         return $salida;
     }
 
-    private function generateToken($number) {
+/**
+ * Generate token 
+ * 
+ * @param int $number number to check
+ * 
+ * @return string value generate 
+ */
+    private function generateToken($number)
+    {
         $token = '';
         if ($this->isFizz($number)) {
             $token .= self::FIZZ;
@@ -30,16 +52,38 @@ class fizzbuzz {
         }
         return $token;
     }
-    
+/**
+ * Check if number is fizz
+ * 
+ * @param int $number to check
+ * 
+ * @return boolean  
+ */
     private function isFizz($number)
     {
-        return $number % 3 == 0;
+        return $this->isDivisibleOrIsPart($number, self::FIZZNUM);
     }
-    
+/**
+ * Check if number is buzz
+ * 
+ * @param int $number to check
+ * 
+ * @return boolean
+ */
     private function isBuzz($number)
     {
-        return $number % 5 == 0;
+        return $this->isDivisibleOrIsPart($number, self::BUZZNUM);
+    }
+/**
+ * Check if $number is divider or if $objetive is part of $number
+ *  
+ * @param int $number   to test
+ * @param int $objetive divider and number to find
+ * 
+ * @return type 
+ */
+    private function isDivisibleOrIsPart($number,$objetive)
+    {
+        return ($number % $objetive == 0)||(strpos($number, $objetive)!==false);
     }
 }
-
-?>
