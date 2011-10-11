@@ -9,8 +9,16 @@ public class FizzBuzz {
 
 	// -------------------------------------------------------------- Constantes
 
+	public final static String FIZZ = "Fizz";
+
+	public final static int FIZZ_NUMBER = 3;
+
+	public final static String BUZZ = "Buzz";
+
+	public final static int BUZZ_NUMBER = 5;
+
 	public final static int DEFAULT_VERSION = 1;
-	
+
 	public final static int EXTENDED_VERSION = 2;
 
 	// --------------------------------------------------------------- Atributos
@@ -32,11 +40,11 @@ public class FizzBuzz {
 		String out = "";
 
 		if (isFizz(number)) {
-			out = "Fizz";
+			out = FIZZ;
 		}
 
 		if (isBuzz(number)) {
-			out += "Buzz";
+			out += BUZZ;
 		}
 
 		if (out.length() == 0) {
@@ -72,9 +80,10 @@ public class FizzBuzz {
 	private boolean isFizz(int number) {
 		boolean result;
 
-		result = isDivisibleBy(number, 3);
+		result = isDivisibleBy(number, FIZZ_NUMBER);
 		if (!result && version == EXTENDED_VERSION) {
-			result = String.valueOf(number).indexOf('3') >= 0;
+			result = String.valueOf(number)
+					.indexOf(String.valueOf(FIZZ_NUMBER)) >= 0;
 		}
 
 		return result;
@@ -83,9 +92,10 @@ public class FizzBuzz {
 	private boolean isBuzz(int number) {
 		boolean result;
 
-		result = isDivisibleBy(number, 5);
+		result = isDivisibleBy(number, BUZZ_NUMBER);
 		if (!result && version == EXTENDED_VERSION) {
-			result = String.valueOf(number).indexOf('5') >= 0;
+			result = String.valueOf(number)
+					.indexOf(String.valueOf(BUZZ_NUMBER)) >= 0;
 		}
 
 		return result;

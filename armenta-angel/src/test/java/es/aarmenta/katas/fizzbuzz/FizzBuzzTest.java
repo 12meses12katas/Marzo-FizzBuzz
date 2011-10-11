@@ -28,18 +28,18 @@ public class FizzBuzzTest {
 	public void testFizz() {
 		FizzBuzz myFizzBuzz = new FizzBuzz();
 		
-		assertEquals("Fizz", myFizzBuzz.process(3));
-		assertEquals("Fizz", myFizzBuzz.process(6));
-		assertEquals("Fizz", myFizzBuzz.process(9));
+		assertEquals(FizzBuzz.FIZZ, myFizzBuzz.process(3));
+		assertEquals(FizzBuzz.FIZZ, myFizzBuzz.process(6));
+		assertEquals(FizzBuzz.FIZZ, myFizzBuzz.process(9));
 	}
 
 	@Test
 	public void testBuzz() {
 		FizzBuzz myFizzBuzz = new FizzBuzz();
 		
-		assertEquals("Buzz", myFizzBuzz.process(5));
-		assertEquals("Buzz", myFizzBuzz.process(10));
-		assertEquals("Buzz", myFizzBuzz.process(20));
+		assertEquals(FizzBuzz.BUZZ, myFizzBuzz.process(5));
+		assertEquals(FizzBuzz.BUZZ, myFizzBuzz.process(10));
+		assertEquals(FizzBuzz.BUZZ, myFizzBuzz.process(20));
 	}
 
 	@Test
@@ -67,9 +67,9 @@ public class FizzBuzzTest {
 		FizzBuzz myFizzBuzz = new FizzBuzz();
 		myFizzBuzz.setVersion(FizzBuzz.EXTENDED_VERSION);
 		
-		assertEquals("Fizz", myFizzBuzz.process(13));
-		assertEquals("Fizz", myFizzBuzz.process(23));
-		assertEquals("Fizz", myFizzBuzz.process(31));
+		assertEquals(FizzBuzz.FIZZ, myFizzBuzz.process(13));
+		assertEquals(FizzBuzz.FIZZ, myFizzBuzz.process(23));
+		assertEquals(FizzBuzz.FIZZ, myFizzBuzz.process(31));
 	}
 
 	@Test
@@ -77,9 +77,9 @@ public class FizzBuzzTest {
 		FizzBuzz myFizzBuzz = new FizzBuzz();
 		myFizzBuzz.setVersion(FizzBuzz.EXTENDED_VERSION);
 		
-		assertEquals("Buzz", myFizzBuzz.process(52));
-		assertEquals("Buzz", myFizzBuzz.process(58));
-		assertEquals("Buzz", myFizzBuzz.process(59));
+		assertEquals(FizzBuzz.BUZZ, myFizzBuzz.process(52));
+		assertEquals(FizzBuzz.BUZZ, myFizzBuzz.process(58));
+		assertEquals(FizzBuzz.BUZZ, myFizzBuzz.process(59));
 	}
 
 	@Test
