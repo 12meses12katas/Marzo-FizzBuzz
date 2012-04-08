@@ -7,25 +7,25 @@ class FizzBuzz
   end
 
   def obtener_valor_imprimir(valor)
-    if multiploCinco(valor) == true and multiploTres(valor) == true
+    if multiploContieneCinco(valor) == true and multiploContieneTres(valor) == true
       return "FizzBuzz"
-    elsif multiploCinco(valor) == true
+    elsif multiploContieneCinco(valor) == true
       return "Buzz"
-    elsif multiploTres(valor) == true
+    elsif multiploContieneTres(valor) == true
       return "Fizz"
     else
       return valor
     end
   end
 
-  def multiploCinco (valor)
-    if valor % 5 == 0
+  def multiploContieneCinco (valor)
+    if valor % 5 == 0 or valor.to_s.include? "5"
       return true
     end
   end
 
-  def multiploTres (valor)
-    if valor % 3 == 0
+  def multiploContieneTres (valor)
+    if valor % 3 == 0 or valor.to_s.include? "3"
       return true
     end
   end
