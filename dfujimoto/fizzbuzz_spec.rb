@@ -15,4 +15,14 @@ describe Fizzbuzz do
     	fizzbuzz = Fizzbuzz.new
     	fizzbuzz.say(3).should == "Fizz" 
   	end
+
+  	it "say 4" do
+    	fizzbuzz = Fizzbuzz.new
+    	fizzbuzz.say(4).should == "4" 
+  	end
+
+  	it "say 5" do
+    	fizzbuzz = Fizzbuzz.new
+    	fizzbuzz.say(5).should == "Buzz" 
+  	end
 end
