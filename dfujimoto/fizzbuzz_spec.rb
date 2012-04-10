@@ -10,4 +10,9 @@ describe Fizzbuzz do
     	fizzbuzz = Fizzbuzz.new
     	fizzbuzz.say(2).should == "2" 
   	end
+
+  	it "say 3" do
+    	fizzbuzz = Fizzbuzz.new
+    	fizzbuzz.say(3).should == "Fizz" 
+  	end
 end
