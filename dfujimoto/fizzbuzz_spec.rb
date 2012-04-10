@@ -65,9 +65,9 @@ describe Fizzbuzz do
   	end  
 
   	it "Buzz" do
-    	[13, 23, 31, 32, 34, 37, 38, 43, 73, 83].each do | number | 
+    	[52, 56, 58, 59].each do | number | 
   			fizzbuzz = Fizzbuzz.new
-  			fizzbuzz.say(number).should == "Fizz" 
+  			fizzbuzz.say(number).should == "Buzz" 
     	end
   	end  	
 end
