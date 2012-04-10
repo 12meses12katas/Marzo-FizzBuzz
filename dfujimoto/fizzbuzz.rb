@@ -1,8 +1,9 @@
 class Fizzbuzz
   def say(number)
-  	if number == 3
+  	@number
+  	if number % 3 == 0
   		@number = "Fizz"
-  	elsif number == 5
+  	elsif number % 5 == 0
   		@number = "Buzz"
   	else
   		@number = String(number)
