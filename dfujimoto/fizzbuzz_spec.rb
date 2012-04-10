@@ -37,14 +37,14 @@ describe Fizzbuzz do
   	end
 
   	it "say 3 div" do
-  		[9, 12, 18, 33, 36, 39].each do | number | 
+  		[9, 12, 18, 33, 36, 39, 42, 48, 63, 66, 69, 72, 78, 81, 84, 87, 93, 96, 99].each do | number | 
   			fizzbuzz = Fizzbuzz.new
   			fizzbuzz.say(number).should == "Fizz" 
     	end
   	end
 
   	it "say 5 div" do
-  		[10, 20, 25, 35, 40, 50, 55, 65, 70, 80, 85, 95, 100].each do | number | 
+  		[10, 20, 25, 40, 50, 55, 65, 70, 80, 85, 95, 100].each do | number | 
   			fizzbuzz = Fizzbuzz.new
   			fizzbuzz.say(number).should == "Buzz" 
     	end
@@ -56,4 +56,18 @@ describe Fizzbuzz do
   			fizzbuzz.say(number).should == "FizzBuzz" 
     	end
   	end
+
+  	it "Fizz" do
+    	[13, 23, 31, 32, 34, 37, 38, 43, 73, 83].each do | number | 
+  			fizzbuzz = Fizzbuzz.new
+  			fizzbuzz.say(number).should == "Fizz" 
+    	end
+  	end  
+
+  	it "Buzz" do
+    	[13, 23, 31, 32, 34, 37, 38, 43, 73, 83].each do | number | 
+  			fizzbuzz = Fizzbuzz.new
+  			fizzbuzz.say(number).should == "Fizz" 
+    	end
+  	end  	
 end
