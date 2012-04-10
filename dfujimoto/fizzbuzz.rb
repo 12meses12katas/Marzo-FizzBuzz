@@ -1,5 +1,6 @@
 class Fizzbuzz
   def say(number)
-  	return "1"
+  	@number = String(number)
+  	return @number
   end
 end
