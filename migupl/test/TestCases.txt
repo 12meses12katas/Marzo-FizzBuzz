@@ -1,0 +1,9 @@
+ * Para un número devuelve ese número
+ * A number is fizz if it is divisible by 3
+ * A number is buzz if it is divisible by 5
+ * Si un número no es especial devuelve ese número
+ * A number is fizz if it has a 3 in it
+ * A number is buzz if it has a 5 in it
+ * Un número no es fizz ni buzz si es nulo
+ * Un número is fizz y buzz si es divisible por 3 y 5
+ 
